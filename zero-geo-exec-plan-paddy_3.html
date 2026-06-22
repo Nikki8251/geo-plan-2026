@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZERO Markets — GEO Growth Strategy 2026–2027</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #0E1A14;
+  --ink-60: #5A6B62;
+  --ink-30: #B8C4BC;
+  --ink-10: #EFF3F1;
+  --teal: #0B6B52;
+  --teal-mid: #1A9970;
+  --teal-pale: #E2F4EE;
+  --gold: #9A6C00;
+  --gold-pale: #FDF4DC;
+  --red-pale: #FDE8E8;
+  --red: #B03030;
+  --amber-pale: #FEF4E3;
+  --amber: #9A6200;
+  --white: #FFFFFF;
+  --page: #F8F9F7;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+}
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--sans); background: var(--page); color: var(--ink); }
+
+/* ── COVER ── */
+.cover {
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 80% 50%, #0B6B5233 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cover-tag {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+  font-weight: 500;
+}
+
+.cover-body { max-width: 620px; }
+
+.cover-label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.cover-title {
+  font-family: var(--serif);
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.cover-title em {
+  font-style: italic;
+  color: var(--teal-mid);
+}
+
+.cover-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.cover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cover-meta { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.8; }
+.cover-meta strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+
+.cover-reg {
+  display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end;
+}
+.reg-badge {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
+
+/* ── PAGE LAYOUT ── */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 72px 64px;
+}
+
+@media (max-width: 720px) {
+  .cover { padding: 40px 32px; }
+  .page { padding: 48px 28px; }
+}
+
+/* ── SECTION HEADERS ── */
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.section-lead {
+  font-size: 16px;
+  color: var(--ink-60);
+  line-height: 1.75;
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--ink-10);
+  margin: 64px 0;
+}
+
+/* ── CONTEXT STRIP ── */
+.context-strip {
+  background: var(--teal-pale);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+  margin-bottom: 48px;
+}
+.context-strip p { font-size: 14px; color: var(--ink); line-height: 1.7; }
+.context-strip strong { color: var(--teal); font-weight: 600; }
+
+/* ── OPPORTUNITY CARDS ── */
+.opp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.opp-card {
+  background: var(--white);
+  border: 1px solid var(--ink-10);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.opp-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--teal);
+}
+
+.opp-num {
+  font-family: var(--serif);
+  font-size: 36px;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.opp-label { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.opp-desc { font-size: 13px; color: var(--ink-60); line-height: 1.6; }
+
+/* ── GAP TABLE ── */
+.gap-section { margin-bottom: 48px; }
+
+.gap-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr 80px 60px;
+  gap: 0;
+  border-bottom: 1px solid var(--ink-10);
+  align-items: start;
+}
+
+.gap-row.header {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.gap-row.header span {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-60);
+}
+
+.gap-row span {
+  font-size: 13px;
+  color: var(--ink);
+  padding: 14px 12px 14px 0;
+  line-height: 1.5;
+}
+
+.gap-row span:first-child { font-weight: 500; }
+
+.status-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.pill-red { background: var(--red-pale); color: var(--red); }
+.pill-amber { background: var(--amber-pale); color: var(--amber); }
+.pill-teal { background: var(--teal-pale); color: var(--teal); }
+
+.p0 { color: var(--red); font-weight: 700; font-size: 12px; }
+.p1 { color: var(--amber); font-weight: 700; font-size: 12px; }
+.p2 { color: var(--teal); font-weight: 700; font-size: 12px; }
+
+/* ── PHASES ── */
+.phase-list { display: flex; flex-direction: column; gap: 0; }
+
+.phase-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  border-top: 1px solid var(--ink-10);
+  padding: 32px 0;
+}
+
+.phase-item:last-child { border-bottom: 1px solid var(--ink-10); }
+
+.phase-left {}
+
+.phase-num {
+  font-family: var(--serif);
+  font-size: 48px;
+  color: var(--ink-10);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.phase-timing {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+
+.phase-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.phase-right {}
+
+.phase-goal {
+  font-size: 14px;
+  color: var(--ink-60);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  border-left: 2px solid var(--teal-mid);
+  padding-left: 14px;
+}
+
+.action-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+.action-item {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.action-bullet {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--teal-pale);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.action-bullet::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.action-tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: var(--ink-10);
+  color: var(--ink-60);
+  margin-left: 6px;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+/* ── WHITEPAPER INSIGHT BLOCK ── */
+.insight-block {
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 36px 40px;
+  margin: 48px 0;
+}
+
+.insight-block .i-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-mid);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.insight-block .i-quote {
+  font-family: var(--serif);
+  font-size: clamp(18px, 3vw, 26px);
+  line-height: 1.4;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.insight-block .i-source {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
+
+.insight-block .i-zero {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+}
+
+.insight-block .i-zero strong { color: var(--teal-mid); font-weight: 500; }
+
+/* ── METRICS TABLE ── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.metric-card {
+  background: var(--white);
+  border: 1px solid var(--ink-10);
+  border-radius: 10px;
+  padding: 20px 18px;
+}
+
+.metric-label { font-size: 11px; color: var(--ink-60); margin-bottom: 6px; font-weight: 500; letter-spacing: 0.04em; }
+.metric-now { font-size: 11px; color: var(--ink-60); }
+.metric-now span { font-size: 20px; font-weight: 300; color: var(--ink); margin-right: 4px; }
+.metric-target { font-size: 12px; color: var(--teal); font-weight: 600; margin-top: 6px; }
+.metric-bar { height: 3px; background: var(--ink-10); border-radius: 2px; margin-top: 10px; }
+.metric-fill { height: 3px; background: var(--teal-mid); border-radius: 2px; }
+
+/* ── RESPONSIBILITY TABLE ── */
+.resp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.resp-table th {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink-60);
+  text-align: left;
+  padding: 10px 12px 10px 0;
+  border-bottom: 2px solid var(--ink);
+}
+.resp-table td {
+  padding: 12px 12px 12px 0;
+  border-bottom: 1px solid var(--ink-10);
+  vertical-align: top;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.owner-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.owner-nikki { background: var(--teal-pale); color: var(--teal); }
+.owner-dev { background: var(--gold-pale); color: var(--gold); }
+.owner-content { background: #EEF2FE; color: #3A4DB0; }
+.owner-compliance { background: var(--red-pale); color: var(--red); }
+
+/* ── FOOTER ── */
+.doc-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.4);
+  padding: 32px 64px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc-footer strong { color: rgba(255,255,255,0.7); font-weight: 500; }
+
+/* ── PRINT ── */
+@media print {
+  .cover { page-break-after: always; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { padding: 48px; }
+  .divider { margin: 40px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-bg"></div>
+  <div class="cover-tag">Confidential · Strategic Brief</div>
+  <div class="cover-body">
+    <div class="cover-label">ZERO Markets · Growth Strategy</div>
+    <h1 class="cover-title">GEO Growth<br>Roadmap<br><em>2026–2027</em></h1>
+    <p class="cover-sub">How ZERO Markets wins in the AI search era — a phased strategy grounded in the GEO Whitepaper framework, adapted for a multi-regulated forex broker.</p>
+  </div>
+  <div class="cover-footer">
+    <div></div>
+    <div class="cover-reg">
+      <span class="reg-badge">ASIC</span>
+      <span class="reg-badge">FMA</span>
+      <span class="reg-badge">FSC</span>
+      <span class="reg-badge">SVG</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1: CONTEXT -->
+<div class="page">
+  <div class="section-eyebrow">01 · The Shift</div>
+  <h2 class="section-title">AI is the new search engine.<br>We are not yet in it.</h2>
+  <p class="section-lead">When a potential client asks ChatGPT, Perplexity, or Google AI Overview "which forex broker should I trust?" — ZERO Markets is not being recommended. This document outlines how we change that.</p>
+
+  <div class="context-strip">
+    <p>GEO (Generative Engine Optimisation) is the discipline of ensuring AI models can <strong>find, trust, and cite</strong> your brand. Our May 2025 tracking round (48 test questions across ChatGPT, Perplexity, Gemini) shows ZERO already achieves <strong>89% P0 citation rate</strong> on brand-direct queries — a strong baseline. The remaining challenge is threefold: converting neutral AI sentiment to positive, closing 11 P2 specialist search gaps, and eliminating negative third-party domain exposure that AI models are actively citing alongside our brand.</p>
+  </div>
+
+  <div class="opp-grid">
+    <div class="opp-card">
+      <div class="opp-num">89%</div>
+      <div class="opp-label">P0 brand citation rate</div>
+      <div class="opp-desc">When users search ZERO by name, AI models cite us reliably. This is a strong foundation — but brand-direct queries are not where new clients come from. Specialist searches are the gap.</div>
+    </div>
+    <div class="opp-card">
+      <div class="opp-num">11</div>
+      <div class="opp-label">P2 specialist search gaps</div>
+      <div class="opp-desc">Queries like "best low spread broker", "best broker for scalping", "most trusted forex broker" return zero ZERO citations across all three AI platforms. These are high-intent acquisition queries.</div>
+    </div>
+    <div class="opp-card">
+      <div class="opp-num">7×</div>
+      <div class="opp-label">WikiFX cited per test</div>
+      <div class="opp-desc">wikifx.com — which contains negative Korean client reviews — is cited more often than our own website. AI models surface this content alongside ZERO answers, suppressing conversion intent.</div>
+    </div>
+  </div>
+
+  <div class="insight-block">
+    <div class="i-label">GEO Whitepaper · Key Finding</div>
+    <div class="i-quote">"A single content block authored by an expert, containing 10 core insights, carries far more weight in 2026 AI algorithms than 10,000 software-generated articles."</div>
+    <div class="i-source">— 《GEO白皮书：AI搜索时代的品牌增长新范式》· Chapter 6.4</div>
+    <div class="i-zero">
+      <strong>ZERO's implication:</strong> We do not need volume — we need depth. Our multi-jurisdiction regulatory expertise, trading infrastructure knowledge, and market-specific compliance insight are exactly the kind of <strong>scarce, expert-authored content blocks</strong> AI models will cite. This is a content strategy we can execute without a large team.
+    </div>
+  </div>
+
+</div>
+
+<hr class="divider" style="max-width:960px;margin:0 auto;">
+
+<!-- SECTION 2: WHERE WE ARE -->
+<div class="page">
+  <div class="section-eyebrow">02 · Where We Are</div>
+  <h2 class="section-title">May 2025 · Round 1<br>What we tested, what we found</h2>
+  <p class="section-lead">48 questions tested across ChatGPT, Perplexity, and Gemini. P0 brand-direct queries perform well. The detail layer reveals content quality issues, outdated information, and competitor content bleeding into our answers.</p>
+
+  <!-- Wins row -->
+  <div class="section-eyebrow" style="margin-bottom:12px;">Completed actions</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:40px;">
+    <div style="background:var(--teal-pale);border-radius:10px;padding:16px 18px;">
+      <div style="font-size:11px;font-weight:600;color:var(--teal);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">Removed</div>
+      <div style="font-size:13px;color:var(--ink);line-height:1.5;">brokerchooser.com page labelling ZERO "not top-tier regulated" — deleted</div>
+    </div>
+    <div style="background:var(--teal-pale);border-radius:10px;padding:16px 18px;">
+      <div style="font-size:11px;font-weight:600;color:var(--teal);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">In progress</div>
+      <div style="font-size:13px;color:var(--ink);line-height:1.5;">WikiFX negative reviews — deletion emails sent, partial removal confirmed</div>
+    </div>
+    <div style="background:var(--teal-pale);border-radius:10px;padding:16px 18px;">
+      <div style="font-size:11px;font-weight:600;color:var(--teal);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">In progress</div>
+      <div style="font-size:13px;color:var(--ink);line-height:1.5;">Forex Peace Army — business partnership appeal filed for 2023–24 complaints</div>
+    </div>
+    <div style="background:var(--amber-pale);border-radius:10px;padding:16px 18px;">
+      <div style="font-size:11px;font-weight:600;color:var(--amber);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.06em;">Pending</div>
+      <div style="font-size:13px;color:var(--ink);line-height:1.5;">Trustpilot — high-quality review seeding to dilute existing negative volume</div>
+    </div>
+  </div>
+
+  <!-- Full question detail table -->
+  <div class="section-eyebrow" style="margin-bottom:12px;">Question detail · all 48 test entries</div>
+  <div style="background:var(--white);border:1px solid var(--ink-10);border-radius:12px;overflow:hidden;margin-bottom:16px;">
+    <table class="resp-table" style="font-size:12px;margin:0;">
+      <tr style="background:var(--page);">
+        <th style="padding:12px 16px;width:28%;">Question</th>
+        <th style="padding:12px 8px;width:7%;">Priority</th>
+        <th style="padding:12px 8px;width:12%;">Platform</th>
+        <th style="padding:12px 8px;width:8%;">Citation</th>
+        <th style="padding:12px 8px;width:10%;">Sentiment</th>
+        <th style="padding:12px 16px;width:35%;">Notes</th>
+      </tr>
+
+      <!-- P0 rows -->
+      <tr><td style="padding:10px 16px;font-size:12px;color:var(--ink-60);" colspan="6"><span class="p0" style="font-size:11px;">P0</span> &nbsp;Brand direct search</td></tr>
+      <tr><td style="padding:8px 16px;">Is ZERO regulated &amp; safe?</td><td><span class="p0">P0</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">Regulatory info incomplete</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Is ZERO regulated &amp; safe?</td><td><span class="p0">P0</span></td><td>Perplexity</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">BrokerChooser negative page handled ✓</td></tr>
+      <tr><td style="padding:8px 16px;">Is ZERO regulated &amp; safe?</td><td><span class="p0">P0</span></td><td>Gemini</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">Partial information outdated</td></tr>
+
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Commissions or fees?</td><td><span class="p0">P0</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">—</td></tr>
+      <tr><td style="padding:8px 16px;">Commissions or fees?</td><td><span class="p0">P0</span></td><td>Perplexity</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">—</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Commissions or fees?</td><td><span class="p0">P0</span></td><td>Gemini</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">Empty</span></td><td style="color:var(--ink-60);">No useful information returned</td></tr>
+
+      <tr><td style="padding:8px 16px;">Minimum deposit</td><td><span class="p0">P0</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">—</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Minimum deposit</td><td><span class="p0">P0</span></td><td>Perplexity</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">Information outdated</td></tr>
+      <tr><td style="padding:8px 16px;">Minimum deposit</td><td><span class="p0">P0</span></td><td>Gemini</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">—</td></tr>
+
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Spreads and fees</td><td><span class="p0">P0</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">—</td></tr>
+      <tr><td style="padding:8px 16px;">Spreads and fees</td><td><span class="p0">P0</span></td><td>Perplexity</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">No useful information surfaced</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Spreads and fees</td><td><span class="p0">P0</span></td><td>Gemini</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">—</td></tr>
+
+      <tr><td style="padding:8px 16px;">Client funds segregated?</td><td><span class="p0">P0</span></td><td>ChatGPT</td><td style="color:var(--ink-60);">—</td><td><span class="status-pill pill-teal" style="font-size:10px;">Positive</span></td><td style="color:var(--ink-60);">Official site directly cited</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Client funds segregated?</td><td><span class="p0">P0</span></td><td>Perplexity</td><td style="color:var(--ink-60);">—</td><td><span class="status-pill pill-teal" style="font-size:10px;">Positive</span></td><td style="color:var(--ink-60);">WikiFX negative content — deletion email sent</td></tr>
+      <tr><td style="padding:8px 16px;">Client funds segregated?</td><td><span class="p0">P0</span></td><td>Gemini</td><td style="color:var(--ink-60);">—</td><td><span class="status-pill pill-teal" style="font-size:10px;">Positive</span></td><td style="color:var(--ink-60);">—</td></tr>
+
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Islamic account?</td><td><span class="p0">P0</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-teal" style="font-size:10px;">Positive</span></td><td style="color:var(--ink-60);">Official site directly cited</td></tr>
+      <tr><td style="padding:8px 16px;">Islamic account?</td><td><span class="p0">P0</span></td><td>Perplexity</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-teal" style="font-size:10px;">Positive</span></td><td style="color:var(--ink-60);">Competitor content dominant in result</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Islamic account?</td><td><span class="p0">P0</span></td><td>Gemini</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-teal" style="font-size:10px;">Positive</span></td><td style="color:var(--ink-60);">—</td></tr>
+
+      <tr><td style="padding:8px 16px;">Withdrawal speed</td><td><span class="p0">P0</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">Competitor content bleeding into answer</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Withdrawal speed</td><td><span class="p0">P0</span></td><td>Perplexity</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">Irrelevant links dominant</td></tr>
+      <tr><td style="padding:8px 16px;">Withdrawal speed</td><td><span class="p0">P0</span></td><td>Gemini</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">Information outdated</td></tr>
+
+      <!-- P1 rows -->
+      <tr><td style="padding:10px 16px;font-size:12px;color:var(--ink-60);" colspan="6"><span class="p1" style="font-size:11px;">P1</span> &nbsp;Competitor comparison</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">vs Pepperstone / IC Markets</td><td><span class="p1">P1</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">Too few comparison articles</td></tr>
+      <tr><td style="padding:8px 16px;">vs Pepperstone / IC Markets</td><td><span class="p1">P1</span></td><td>Perplexity</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">FPA complaints need resolution</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">vs Pepperstone / IC Markets</td><td><span class="p1">P1</span></td><td>Gemini</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">—</td></tr>
+      <tr><td style="padding:8px 16px;">vs CMC Markets</td><td><span class="p1">P1</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill pill-amber" style="font-size:10px;">Neutral</span></td><td style="color:var(--ink-60);">ZERO mentioned only once</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">vs CMC Markets</td><td><span class="p1">P1</span></td><td>Perplexity</td><td style="color:var(--ink-60);">—</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">Untested</span></td><td style="color:var(--ink-60);">Not yet tested</td></tr>
+      <tr><td style="padding:8px 16px;">vs CMC Markets</td><td><span class="p1">P1</span></td><td>Gemini</td><td style="color:var(--ink-60);">—</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">Untested</span></td><td style="color:var(--ink-60);">Not yet tested</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">vs FP Markets</td><td><span class="p1">P1</span></td><td>All platforms</td><td style="color:var(--ink-60);">—</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">Untested</span></td><td style="color:var(--ink-60);">Not yet tested across any platform</td></tr>
+
+      <!-- P2 rows -->
+      <tr><td style="padding:10px 16px;font-size:12px;color:var(--ink-60);" colspan="6"><span class="p2" style="font-size:11px;">P2</span> &nbsp;Specialist search — all gaps</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Best low spreads broker</td><td><span class="p2">P2</span></td><td>ChatGPT</td><td style="color:var(--red);font-weight:600;">N</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">No data</span></td><td style="color:var(--red);">Need third-party comparison articles</td></tr>
+      <tr><td style="padding:8px 16px;">Best low spreads broker</td><td><span class="p2">P2</span></td><td>Perplexity</td><td style="color:var(--red);font-weight:600;">N</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">No data</span></td><td style="color:var(--ink-60);">—</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Best low spreads broker</td><td><span class="p2">P2</span></td><td>Gemini</td><td style="color:var(--red);font-weight:600;">N</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">No data</span></td><td style="color:var(--ink-60);">—</td></tr>
+      <tr><td style="padding:8px 16px;">Most trusted forex broker</td><td><span class="p2">P2</span></td><td>All platforms</td><td style="color:var(--ink-60);">—</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">Untested</span></td><td style="color:var(--ink-60);">Not yet tested — high-intent query</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Low min deposit CFD broker</td><td><span class="p2">P2</span></td><td>All platforms</td><td style="color:var(--red);font-weight:600;">N</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">No data</span></td><td style="color:var(--ink-60);">Zero citations across all 3 platforms</td></tr>
+      <tr><td style="padding:8px 16px;">ASIC regulated brokers list</td><td><span class="p2">P2</span></td><td>ChatGPT</td><td style="color:var(--teal);font-weight:600;">Y</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">No data</span></td><td style="color:var(--ink-60);">Only ChatGPT — Perplexity and Gemini miss</td></tr>
+      <tr style="background:var(--page);"><td style="padding:8px 16px;">Best broker for scalping</td><td><span class="p2">P2</span></td><td>All platforms</td><td style="color:var(--red);font-weight:600;">N</td><td><span class="status-pill" style="font-size:10px;background:var(--ink-10);color:var(--ink-60);">No data</span></td><td style="color:var(--ink-60);">Zero citations — scalping content absent from site</td></tr>
+    </table>
+  </div>
+
+  <div style="font-size:12px;color:var(--ink-60);line-height:1.6;padding:0 4px;">
+    Key pattern: P0 citation coverage is strong but sentiment stays at neutral because the content AI models pull is either <strong style="color:var(--ink);">outdated</strong> (withdrawal speed, minimum deposit), <strong style="color:var(--ink);">missing depth</strong> (commissions returning empty), or <strong style="color:var(--ink);">mixed with competitor content</strong>. Fixing these doesn't require new pages — it requires updating and structuring what already exists.
+  </div>
+</div>
+
+<hr class="divider" style="max-width:960px;margin:0 auto;">
+
+<!-- SECTION 3: GAP AUDIT -->
+<div class="page">
+  <div class="section-eyebrow">03 · Where We Stand</div>
+  <h2 class="section-title">Gap audit against<br>the GEO framework</h2>
+  <p class="section-lead">10 dimensions mapped to ZERO's current state. Three P0 issues must be resolved in Q3 before any content investment makes sense.</p>
+
+  <div class="gap-section">
+    <div class="gap-row header">
+      <span>GEO Dimension</span>
+      <span>Requirement</span>
+      <span>ZERO Status</span>
+      <span>State</span>
+      <span>Priority</span>
+    </div>
+
+    <div class="gap-row">
+      <span>llms.txt protocol</span>
+      <span>Root-level file declaring what AI crawlers may cite</span>
+      <span>Completely absent — AI crawlers receive no guidance</span>
+      <span><span class="status-pill pill-red">Missing</span></span>
+      <span class="p0">P0</span>
+    </div>
+
+    <div class="gap-row">
+      <span>Structured data</span>
+      <span>Schema.org: Organization, FAQPage, FinancialProduct, BreadcrumbList</span>
+      <span>No Schema markup deployed; AI cannot parse product or regulatory info</span>
+      <span><span class="status-pill pill-red">Missing</span></span>
+      <span class="p0">P0</span>
+    </div>
+
+    <div class="gap-row">
+      <span>Domain authority unity</span>
+      <span>All authority content under one domain to concentrate trust signals</span>
+      <span>blog.zeromarkets.com splits domain authority — a critical SEO and GEO liability</span>
+      <span><span class="status-pill pill-red">Issue</span></span>
+      <span class="p0">P0</span>
+    </div>
+
+    <div class="gap-row">
+      <span>Inverted pyramid structure</span>
+      <span>Key conclusion in first 50 words, supporting data below — AI-scrapable</span>
+      <span>Product pages lead with brand narrative; critical data buried below the fold</span>
+      <span><span class="status-pill pill-amber">Weak</span></span>
+      <span class="p0">P0</span>
+    </div>
+
+    <div class="gap-row">
+      <span>Content chunking</span>
+      <span>150–300 word self-contained semantic blocks, one insight per block</span>
+      <span>Long-form content not chunked; AI cannot extract clean citations</span>
+      <span><span class="status-pill pill-amber">Weak</span></span>
+      <span class="p1">P1</span>
+    </div>
+
+    <div class="gap-row">
+      <span>E-E-A-T signals</span>
+      <span>Author bios, expert credentials, regulatory citation, sourced data</span>
+      <span>ASIC/FMA licences present but scattered; no author pages or expert attribution</span>
+      <span><span class="status-pill pill-amber">Partial</span></span>
+      <span class="p1">P1</span>
+    </div>
+
+    <div class="gap-row">
+      <span>AI bot permissions</span>
+      <span>robots.txt explicitly allows GPTBot, ClaudeBot, PerplexityBot</span>
+      <span>Not configured for AI crawlers; default block may prevent indexing</span>
+      <span><span class="status-pill pill-amber">Unknown</span></span>
+      <span class="p1">P1</span>
+    </div>
+
+    <div class="gap-row">
+      <span>Multilingual GEO</span>
+      <span>Per-market AI search optimisation with hreflang + local content</span>
+      <span>Korean and Portuguese content minimal; hreflang not standardised</span>
+      <span><span class="status-pill pill-red">Missing</span></span>
+      <span class="p1">P1</span>
+    </div>
+
+    <div class="gap-row">
+      <span>Defensive monitoring</span>
+      <span>AI brand sentiment monitoring + rapid response SOP</span>
+      <span>No systematic monitoring of how AI models describe ZERO to users</span>
+      <span><span class="status-pill pill-red">Missing</span></span>
+      <span class="p1">P1</span>
+    </div>
+
+    <div class="gap-row">
+      <span>AI content compliance</span>
+      <span>Compliance review integrated into AI content production flow</span>
+      <span>AI-generated content has no compliance checkpoint for multi-jurisdiction risk</span>
+      <span><span class="status-pill pill-amber">Absent</span></span>
+      <span class="p2">P2</span>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider" style="max-width:960px;margin:0 auto;">
+
+<!-- SECTION 3: PHASED ROADMAP -->
+<div class="page">
+  <div class="section-eyebrow">04 · Execution Plan</div>
+  <h2 class="section-title">Four phases to GEO<br>market leadership</h2>
+  <p class="section-lead">Each phase builds on the last. Technical foundation first — content investment before the infrastructure is ready is wasted spend.</p>
+
+  <div class="phase-list">
+
+    <div class="phase-item">
+      <div class="phase-left">
+        <div class="phase-num">01</div>
+        <div class="phase-timing">2026 Q3 · Weeks 1–6</div>
+        <div class="phase-name">Foundation<br>"Make us findable"</div>
+      </div>
+      <div class="phase-right">
+        <div class="phase-goal">Goal: Ensure every major AI model can crawl, parse, and trust ZERO's core pages. No content investment before this is in place.</div>
+        <ul class="action-list">
+          <li class="action-item"><div class="action-bullet"></div><span>Deploy <strong>llms.txt</strong> at root domain — declare core pages AI crawlers may cite <span class="action-tag">30 min</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Update <strong>robots.txt</strong> to explicitly permit GPTBot, ClaudeBot, PerplexityBot <span class="action-tag">Dev</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Deploy <strong>Schema.org</strong>: Organization + FinancialProduct + FAQPage + BreadcrumbList across all key pages <span class="action-tag">Dev · 2 weeks</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Begin migration plan for <strong>blog subdomain → main domain</strong> (301 redirect strategy) <span class="action-tag">Dev · Arch</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Set up <strong>AI brand monitoring dashboard</strong>: weekly checks across ChatGPT, Perplexity, Gemini for ZERO citations <span class="action-tag">Marketing</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-item">
+      <div class="phase-left">
+        <div class="phase-num">02</div>
+        <div class="phase-timing">2026 Q4 · Weeks 7–14</div>
+        <div class="phase-name">Authority<br>"Earn the citation"</div>
+      </div>
+      <div class="phase-right">
+        <div class="phase-goal">Goal: Give AI models a reason to cite ZERO over competitors. Convert our regulatory credentials into structured, AI-scrapable expert content.</div>
+        <ul class="action-list">
+          <li class="action-item"><div class="action-bullet"></div><span>Rewrite core landing pages in <strong>inverted pyramid structure</strong>: regulatory proof + key stats in first 60 words <span class="action-tag">Content</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Produce <strong>3 regulatory deep-dives per market</strong>: AU (ASIC client protections), NZ (FMA compliance), KR (local trading law) <span class="action-tag">Content · Compliance</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Build a <strong>50-question FAQ knowledge base</strong>: each answer ≤150 words, structured for AI extraction <span class="action-tag">Content</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Add <strong>author/analyst pages</strong> with credentials, regulatory expertise, and bios — strengthens E-E-A-T Expert dimension <span class="action-tag">Content</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Secure citations on <strong>Wikipedia, Investopedia, Forex Peace Army, Trustpilot</strong> — primary sources AI models trust <span class="action-tag">Outreach</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-item">
+      <div class="phase-left">
+        <div class="phase-num">03</div>
+        <div class="phase-timing">2027 Q1 · Weeks 15–24</div>
+        <div class="phase-name">Expansion<br>"Own multilingual AI"</div>
+      </div>
+      <div class="phase-right">
+        <div class="phase-goal">Goal: Capture AI answer space in Korean and Portuguese markets where AI search adoption is accelerating and English-first competitors have no presence.</div>
+        <ul class="action-list">
+          <li class="action-item"><div class="action-bullet"></div><span><strong>Korean GEO content</strong>: 10 articles targeting Naver AI Search and HyperCLOVA scenarios — local regulatory FAQ, trading education <span class="action-tag">KR Team</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span><strong>Portuguese/Spanish GEO</strong>: Brazil PIX payment explainers + local forex regulation FAQ for BR, MX, CO <span class="action-tag">LATAM Team</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Standardise <strong>hreflang tags</strong> across all 5 language versions so AI crawlers attribute content correctly <span class="action-tag">Dev</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Co-publish content with <strong>local analysts and KOLs</strong> to gain citations on high-authority regional domains <span class="action-tag">Growth</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Establish <strong>AI content compliance process</strong>: Compliance review → localisation → GEO optimisation → publish <span class="action-tag">Process</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase-item">
+      <div class="phase-left">
+        <div class="phase-num">04</div>
+        <div class="phase-timing">2027 Q2–Q4</div>
+        <div class="phase-name">Moat<br>"Build the defensible asset"</div>
+      </div>
+      <div class="phase-right">
+        <div class="phase-goal">Goal: Convert GEO capability into a durable competitive moat — a knowledge infrastructure that is expensive for competitors to replicate.</div>
+        <ul class="action-list">
+          <li class="action-item"><div class="action-bullet"></div><span>Launch <strong>ZERO FX Market Weekly</strong> as an API/RSS feed — AI tools can directly subscribe to our market data <span class="action-tag">Data Product</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Build <strong>ZERO FX Encyclopedia</strong>: 500 core trading terms, each with compliance annotations across 4 jurisdictions <span class="action-tag">Content</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Activate <strong>defensive AI SOP</strong>: 14-day response process for incorrect or negative brand information in AI outputs <span class="action-tag">Marketing</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Establish <strong>quarterly GEO audit</strong>: AI citation rate, competitive share of voice, content gap analysis <span class="action-tag">Analytics</span></span></li>
+          <li class="action-item"><div class="action-bullet"></div><span>Explore <strong>AI agent integrations</strong>: Perplexity Spaces, GPT Actions, Claude Projects — direct brand placement <span class="action-tag">Frontier</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider" style="max-width:960px;margin:0 auto;">
+
+<!-- SECTION 4: METRICS -->
+<div class="page">
+  <div class="section-eyebrow">05 · Measurement</div>
+  <h2 class="section-title">How we know<br>it's working</h2>
+  <p class="section-lead">GEO metrics differ from SEO. We are not tracking page rank — we are tracking whether AI models choose to include ZERO in their answers.</p>
+
+  <!-- Live data from GEO Progress tracker May 2025 -->
+  <div style="background:var(--teal-pale);border-left:3px solid var(--teal);border-radius:0 8px 8px 0;padding:16px 22px;margin-bottom:28px;display:flex;align-items:center;gap:10px;">
+    <span style="font-size:12px;color:var(--teal);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">Live data</span>
+    <span style="font-size:13px;color:var(--ink);">Sourced from GEO Intelligence Dashboard · May 2025 Round 1 · 48 test questions across ChatGPT, Perplexity, Gemini</span>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-label">P0 citation rate</div>
+      <div class="metric-now"><span>89%</span>brand direct</div>
+      <div class="metric-target">Target: ≥95% sustained</div>
+      <div class="metric-bar"><div class="metric-fill" style="width:89%"></div></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">P2 specialist search gaps</div>
+      <div class="metric-now"><span>11</span>uncited</div>
+      <div class="metric-target">Target Q4: ≤3 gaps</div>
+      <div class="metric-bar"><div class="metric-fill" style="width:20%;background:#EF9F27"></div></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Dominant AI sentiment</div>
+      <div class="metric-now"><span>73%</span>neutral</div>
+      <div class="metric-target">Target: ≥40% positive</div>
+      <div class="metric-bar"><div class="metric-fill" style="width:73%;background:#EF9F27"></div></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Official site citations</div>
+      <div class="metric-now"><span>5×</span>per test</div>
+      <div class="metric-target">Target: Top cited domain</div>
+      <div class="metric-bar"><div class="metric-fill" style="width:45%"></div></div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-label">Negative domain exposure</div>
+      <div class="metric-now"><span>4</span>active risks</div>
+      <div class="metric-target">Target Q3: ≤1</div>
+      <div class="metric-bar"><div class="metric-fill" style="width:60%;background:#E24B4A"></div></div>
+    </div>
+  </div>
+
+  <!-- Citation Heatmap Summary -->
+  <div style="background:var(--white);border:1px solid var(--ink-10);border-radius:12px;padding:28px 32px;margin-bottom:28px;">
+    <div class="section-eyebrow" style="margin-bottom:16px;">Citation heatmap · May 2025 · 3 platforms</div>
+    <table class="resp-table" style="font-size:12px;">
+      <tr>
+        <th style="width:38%">Question</th>
+        <th style="width:8%">Priority</th>
+        <th style="width:14%">ChatGPT</th>
+        <th style="width:14%">Perplexity</th>
+        <th style="width:14%">Gemini</th>
+        <th style="width:12%">Action</th>
+      </tr>
+      <tr><td>Is ZERO regulated &amp; safe?</td><td><span class="p0">P0</span></td><td>✓</td><td>✓</td><td>✓</td><td style="color:var(--teal);font-weight:500;">Hold</td></tr>
+      <tr><td>Fees &amp; commissions</td><td><span class="p0">P0</span></td><td>✓</td><td>✓</td><td>✓</td><td style="color:var(--teal);font-weight:500;">Hold</td></tr>
+      <tr><td>Minimum deposit</td><td><span class="p0">P0</span></td><td>✓</td><td>✓</td><td>✓</td><td style="color:var(--teal);font-weight:500;">Hold</td></tr>
+      <tr><td>Spreads and fees</td><td><span class="p0">P0</span></td><td>✓</td><td>✓</td><td>✓</td><td style="color:var(--teal);font-weight:500;">Hold</td></tr>
+      <tr><td>Client funds segregated?</td><td><span class="p0">P0</span></td><td style="color:var(--ink-60);">—</td><td style="color:var(--ink-60);">—</td><td style="color:var(--ink-60);">—</td><td style="color:var(--amber);font-weight:500;">Untested</td></tr>
+      <tr><td>vs Pepperstone / IC Markets</td><td><span class="p1">P1</span></td><td>✓</td><td>✓</td><td>✓</td><td style="color:var(--teal);font-weight:500;">Hold</td></tr>
+      <tr><td>vs FP Markets</td><td><span class="p1">P1</span></td><td style="color:var(--ink-60);">—</td><td style="color:var(--ink-60);">—</td><td style="color:var(--ink-60);">—</td><td style="color:var(--amber);font-weight:500;">Gap</td></tr>
+      <tr><td>Best low spreads broker</td><td><span class="p2">P2</span></td><td style="color:var(--red);">✗</td><td style="color:var(--red);">✗</td><td style="color:var(--red);">✗</td><td style="color:var(--red);font-weight:500;">Priority</td></tr>
+      <tr><td>Most trusted forex broker</td><td><span class="p2">P2</span></td><td style="color:var(--ink-60);">—</td><td style="color:var(--ink-60);">—</td><td style="color:var(--ink-60);">—</td><td style="color:var(--red);font-weight:500;">Untested</td></tr>
+      <tr><td>Low min deposit CFD broker</td><td><span class="p2">P2</span></td><td style="color:var(--red);">✗</td><td style="color:var(--red);">✗</td><td style="color:var(--red);">✗</td><td style="color:var(--red);font-weight:500;">Priority</td></tr>
+      <tr><td>ASIC regulated brokers list</td><td><span class="p2">P2</span></td><td>✓</td><td style="color:var(--red);">✗</td><td style="color:var(--red);">✗</td><td style="color:var(--amber);font-weight:500;">Partial</td></tr>
+      <tr><td>Best broker for scalping</td><td><span class="p2">P2</span></td><td style="color:var(--red);">✗</td><td style="color:var(--red);">✗</td><td style="color:var(--red);">✗</td><td style="color:var(--red);font-weight:500;">Priority</td></tr>
+    </table>
+  </div>
+
+  <!-- Negative domain risk -->
+  <div style="background:var(--white);border:1px solid var(--ink-10);border-radius:12px;padding:28px 32px;margin-bottom:32px;">
+    <div class="section-eyebrow" style="margin-bottom:4px;">Negative domain risk tracker</div>
+    <p style="font-size:13px;color:var(--ink-60);margin-bottom:16px;">AI models frequently cite these domains when returning ZERO search results. Negative content here directly suppresses our sentiment score.</p>
+    <table class="resp-table" style="font-size:12px;">
+      <tr>
+        <th style="width:22%">Domain</th>
+        <th style="width:38%">Issue</th>
+        <th style="width:20%">Status</th>
+        <th style="width:20%">AI citations</th>
+      </tr>
+      <tr>
+        <td style="font-weight:500;color:var(--red);">wikifx.com</td>
+        <td>Multiple negative reviews · Korean client withdrawal complaints · Low score</td>
+        <td><span class="status-pill pill-amber">Email in progress · some deleted</span></td>
+        <td>7× per test round</td>
+      </tr>
+      <tr>
+        <td style="font-weight:500;color:var(--red);">trustpilot.com</td>
+        <td>Volume of negative user reviews · dilution needed</td>
+        <td><span class="status-pill pill-red">Pending</span></td>
+        <td>3× per test round</td>
+      </tr>
+      <tr>
+        <td style="font-weight:500;color:var(--amber);">forexpeacearmy.com</td>
+        <td>2 complaints (2023–24) · business partnership reset in progress</td>
+        <td><span class="status-pill pill-amber">FPA appeal in progress</span></td>
+        <td>Spot appearances</td>
+      </tr>
+      <tr>
+        <td style="font-weight:500;color:var(--ink-60);">brokerchooser.com</td>
+        <td>Labelled "not top-tier regulated" · funnelling traffic to competitors</td>
+        <td><span class="status-pill pill-teal">Deleted</span></td>
+        <td>Resolved</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background:var(--white);border:1px solid var(--ink-10);border-radius:12px;padding:28px 32px;margin-bottom:32px;">
+    <div class="section-eyebrow" style="margin-bottom:16px;">Weekly monitoring checklist</div>
+    <table class="resp-table">
+      <tr>
+        <th style="width:30%">Signal</th>
+        <th style="width:40%">Method</th>
+        <th style="width:18%">Tool</th>
+        <th style="width:12%">Frequency</th>
+      </tr>
+      <tr>
+        <td>AI brand citation quality</td>
+        <td>Ask "trusted forex broker" queries in ChatGPT, Perplexity, Gemini. Record ZERO's position and the language used.</td>
+        <td>Manual + monitoring tool</td>
+        <td>Weekly</td>
+      </tr>
+      <tr>
+        <td>Negative AI content</td>
+        <td>Check whether any incorrect or negative ZERO information is being surfaced by AI models</td>
+        <td>Brand24</td>
+        <td>Daily</td>
+      </tr>
+      <tr>
+        <td>Structured data health</td>
+        <td>Schema validation across key pages; rich results test</td>
+        <td>Google Search Console</td>
+        <td>Fortnightly</td>
+      </tr>
+      <tr>
+        <td>AI search referral traffic</td>
+        <td>Track referral sessions from Perplexity.ai, SearchGPT, Bing Chat</td>
+        <td>GA4</td>
+        <td>Weekly</td>
+      </tr>
+      <tr>
+        <td>Authority citation health</td>
+        <td>Wikipedia, Investopedia, Trustpilot entries — content accuracy and ranking</td>
+        <td>Ahrefs</td>
+        <td>Monthly</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<hr class="divider" style="max-width:960px;margin:0 auto;">
+
+<!-- SECTION 5: OWNERSHIP -->
+<div class="page">
+  <div class="section-eyebrow">06 · Who Does What</div>
+  <h2 class="section-title">Ownership &amp; resourcing</h2>
+  <p class="section-lead">Phase 1 is largely a developer task. Phase 2 is where Marketing drives. The investment is weighted toward expert content, not volume.</p>
+
+  <table class="resp-table">
+    <tr>
+      <th>Workstream</th>
+      <th>Owner</th>
+      <th>Phase</th>
+      <th>Est. effort</th>
+    </tr>
+    <tr>
+      <td>llms.txt + robots.txt configuration</td>
+      <td><span class="owner-pill owner-dev">Dev</span></td>
+      <td>Phase 1</td>
+      <td>1 day</td>
+    </tr>
+    <tr>
+      <td>Schema.org full deployment</td>
+      <td><span class="owner-pill owner-dev">Dev</span></td>
+      <td>Phase 1</td>
+      <td>2 weeks</td>
+    </tr>
+    <tr>
+      <td>Blog subdomain migration</td>
+      <td><span class="owner-pill owner-dev">Dev</span> + <span class="owner-pill owner-nikki">Growth</span></td>
+      <td>Phase 1–2</td>
+      <td>4 weeks</td>
+    </tr>
+    <tr>
+      <td>AI brand monitoring setup</td>
+      <td><span class="owner-pill owner-nikki">Growth</span></td>
+      <td>Phase 1</td>
+      <td>3 days</td>
+    </tr>
+    <tr>
+      <td>Core page content restructure</td>
+      <td><span class="owner-pill owner-content">Content</span> + <span class="owner-pill owner-nikki">Growth</span></td>
+      <td>Phase 2</td>
+      <td>6 weeks</td>
+    </tr>
+    <tr>
+      <td>Regulatory deep-dive articles (×15)</td>
+      <td><span class="owner-pill owner-content">Content</span> + <span class="owner-pill owner-compliance">Compliance</span></td>
+      <td>Phase 2</td>
+      <td>8 weeks</td>
+    </tr>
+    <tr>
+      <td>FAQ knowledge base (50 entries)</td>
+      <td><span class="owner-pill owner-content">Content</span></td>
+      <td>Phase 2</td>
+      <td>4 weeks</td>
+    </tr>
+    <tr>
+      <td>Author pages + E-E-A-T setup</td>
+      <td><span class="owner-pill owner-nikki">Growth</span></td>
+      <td>Phase 2</td>
+      <td>1 week</td>
+    </tr>
+    <tr>
+      <td>Korean GEO content (×10)</td>
+      <td><span class="owner-pill owner-content">KR Content</span></td>
+      <td>Phase 3</td>
+      <td>10 weeks</td>
+    </tr>
+    <tr>
+      <td>Portuguese/Spanish GEO content</td>
+      <td><span class="owner-pill owner-content">LATAM Content</span></td>
+      <td>Phase 3</td>
+      <td>10 weeks</td>
+    </tr>
+    <tr>
+      <td>AI compliance review process</td>
+      <td><span class="owner-pill owner-compliance">Compliance</span> + <span class="owner-pill owner-nikki">Growth</span></td>
+      <td>Phase 3</td>
+      <td>2 weeks</td>
+    </tr>
+    <tr>
+      <td>Quarterly GEO audit cadence</td>
+      <td><span class="owner-pill owner-nikki">Growth</span></td>
+      <td>Phase 4 → ongoing</td>
+      <td>2 days/quarter</td>
+    </tr>
+  </table>
+
+  <div class="insight-block" style="margin-top:48px;">
+    <div class="i-label">Strategic rationale · For Paddy</div>
+    <div class="i-quote">"True winners in AI search will be enterprises that hold to E-E-A-T principles — building real, transparent, structured authority content that earns AI model trust and, ultimately, user trust."</div>
+    <div class="i-source">— GEO Whitepaper · Conclusion</div>
+    <div class="i-zero">
+      ZERO's position is genuinely strong here. <strong>Four regulatory licences, five markets, a decade of track record</strong> — these are the trust signals AI models are built to surface. The gap is not in what we have; it's in how we've structured what we have for machine readability. The roadmap above is largely an <strong>infrastructure and presentation challenge</strong>, not a credibility-building exercise from scratch. That means faster results with lower risk than building a GEO position from zero.
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  <span><strong>ZERO Markets</strong> · GEO Growth Roadmap · Confidential</span>
+  <span>Prepared by Growth · June 2026</span>
+</div>
+
+</body>
+</html>
